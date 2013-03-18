@@ -25,7 +25,6 @@ def get_config():
         results[section] = {}
         for option in config.options(section):
             results[section][option] = config.get(section, option)
-    print results
     return results
 
 
