@@ -17,8 +17,9 @@ except ImportError:
 
 def get_config():
     '''Get values from cfg file'''
+    conf_file = '%s/config.ini' % os.path.dirname(os.path.realpath(__file__))
     config = ConfigParser.ConfigParser()
-    config.read('config.ini')
+    config.read(conf_file)
 
     results = {}
     for section in config.sections():
@@ -37,8 +38,8 @@ def create_app(config=None):
 
     return app
 
-
-app = create_app('config.cfg')
+conf_file = '%s/config.cfg' % os.path.dirname(os.path.realpath(__file__))
+app = create_app(conf_file)
 mail = Mail(app)
 
 
