@@ -64,6 +64,7 @@ def contact():
     msg = Message(values.get('subject', 'Contact'))
     msg.sender = app.config.get('MAIL_SENDER')
     msg.recipients = app.config.get('MAIL_RECEPIENTS')
+    msg.reply_to = values.get('email')
     msg.body = '\n'.join(vals)
     mail.send(msg)
 
