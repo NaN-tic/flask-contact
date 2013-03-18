@@ -1,0 +1,17 @@
+DEBUG = True
+DEBUG_LOG = 'logs/debug.log'
+ERROR_LOG =  'logs/error.log'
+
+ADMINS = ('user@domain.com',)
+
+MAIL_SERVER =  'smtp.gmail.com'
+MAIL_PORT = 465
+MAIL_USE_TLS = False
+MAIL_USE_SSL = True
+MAIL_DEBUG = DEBUG
+MAIL_USERNAME = ''
+MAIL_PASSWORD = ''
+DEFAULT_MAIL_SENDER = ''
+
+MAIL_SENDER = 'user@domain.com'
+MAIL_RECEPIENTS = ['user@domain.com']

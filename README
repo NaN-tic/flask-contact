@@ -1,0 +1,30 @@
+Flask-Contact
+=============
+
+Flask-Contact is a Flask App providing simple JSON form and sending email.
+
+Installing
+----------
+
+See INSTALL
+
+Support
+-------
+
+For more information or if you encounter any problems with this module,
+please contact the programmers at
+
+  Zikzakmedia
+  --------------
+  website: http://www.zikzakmedia.com/
+  email: zikzak@zikzakmedia.com
+
+License
+-------
+
+See LICENSE
+
+Copyright
+---------
+
+See COPYRIGHT

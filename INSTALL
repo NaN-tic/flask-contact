@@ -1,0 +1,67 @@
+Installing Flask Contact
+========================
+
+Prerequisites
+-------------
+
+ * Flask (https://pypi.python.org/pypi/Flask)
+ * Flask Mail (https://pypi.python.org/pypi/Flask-Mail)
+
+Optional
+--------
+
+ * EmailValid (https://bitbucket.org/zikzakmedia/python-emailvalid)
+
+Configuration
+-------------
+
+config.ini
+
+* APP NAME
+
+config.cfg
+
+* SMTP VALUES
+
+Send form
+---------
+
+Send HTML form data using POST and JSON:
+
+JQuery:
+
+    var data = $('#contact-form').serializeArray();
+
+    $.ajax({
+        type: "POST",
+        url: "http://127.0.0.1:5000/contact",
+        contentType: "application/json; charset=utf-8",
+        data:JSON.stringify(data),
+        success: function(data) {
+            $('#waiting').hide();
+            $('#success').show();
+            $('#success').text('Datos enviados. Nos pondremos en contacto con vosotros');
+            },
+        error:function(data){
+            $('#waiting').hide();
+            $('#warning').show();
+            $('#warning').text('Revise los datos del formulario y vuelve enviar.');
+            },
+        });
+
+JSON values:
+
+    {
+        name: '',
+        email: '',
+        message: '',
+        subject: '',
+    }
+
+LOGS
+----
+
+Create logs files:
+
+* debug.log
+* error.log
